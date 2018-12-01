@@ -2,15 +2,7 @@
 
 ## Abstract: 
 
- alorenz derive and plot the Pen's Parade, Lorenz and Generalized Lorenz curve from the
-    empirical distribution. In addition, alorenz allow user to retrive the data used to generate
-    the curves, and implement first order stochastic dominance (Saposnik, 1981, 1983), second
-    order stochastic dominance (Shorrocks, 1983), and the Lorenz dominance analysis of the
-    distribution (Atkinson, 1970). Moreover, following Pigou-Dalton principles, demonstrated by
-    Marshall & Olkin (1979), alorenz also ranks two or more social states by analysing the Lorenz,
-    Generalized Lorenz, and Pen's Parade. alorenz also performs the two-sample Kolmogorov-Smirnov
-    tests of the equality of distributions.
-
+alorenz derive and plot the Pen's Parade, Lorenz and Generalized Lorenz curve from the empirical distribution. In addition, alorenz allow user to retrive the data used to generate the curves, and implement first order stochastic dominance (Saposnik, 1981, 1983), second order stochastic dominance (Shorrocks, 1983), and the Lorenz dominance analysis of the distribution (Atkinson, 1970). Moreover, following Pigou-Dalton principles, demonstrated by Marshall & Olkin (1979), alorenz also ranks two or more social states by analysing the Lorenz, Generalized Lorenz, and Pen's Parade. alorenz also performs the two-sample Kolmogorov-Smirnov tests of the equality of distributions.
 
 ## Suggested Citation
 
