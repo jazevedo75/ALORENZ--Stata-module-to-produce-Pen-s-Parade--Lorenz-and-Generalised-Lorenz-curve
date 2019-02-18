@@ -1,4 +1,4 @@
-# ALORENZ: Stata module to produce Pen's Parade, Lorenz and Generalised Lorenz curve
+﻿# ALORENZ: Stata module to produce Pen's Parade, Lorenz and Generalised Lorenz curve
 
 ## Abstract: 
 
@@ -32,4 +32,12 @@ This module should be installed from within Stata by typing "ssc install alorenz
 #### Keywords: 
 Pen's Parade; Lorenz; Generalized Lorenz
 
+## Authors: 
+
+  **João Pedro Azevedo **  
+  [jazevedo@worldbank.org](mailto:jazevedo@worldbank.org)  
+  World Bank  
+  [personal page](http://www.worldbank.org/en/about/people/j/joao-pedro-azevedo)  
+
+  **Samuel Franco**  
 
