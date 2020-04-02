@@ -1,4 +1,6 @@
-*! version 2.3.1       < 04feb2019>         JPAzevedo
+*! version 2.3.2       < 02apr2020>         JPAzevedo
+*	fix _ebin weights
+* version 2.3.1       < 04feb2019>         JPAzevedo
 *	preserve return values
 * version 2.3          < 02july2014>         JPAzevedo
 * 	fix replace _pecatsal in ebin
