@@ -1,3 +1,4 @@
+*! version 0.2          < 02july2014>         JPAzevedo
 *! version 0.1          < 24march2012>         JPAzevedo
 
 cap program drop _ebin
@@ -22,12 +23,12 @@ cap program drop _ebin
 
             if ("`weight'" == "") {
                 gen `wgt' = 1
-                local weight1 `wgt'
+                local weight1 "`wgt'"
                 local weight "[fw=`wgt']"
             }
             else {
                 local weight  "[`weight' `exp']"
-                local weight1 = subinstr("`exp'","=","",.)
+                local weight1 = trim(subinstr("`exp'","=","",.))
             }
 
             if ("`order'" != "") {
@@ -61,8 +62,8 @@ cap program drop _ebin
             }
 
             gen double `rank1'  = `weight1' in 1 if `touse'
-            replace `rank1'     = `rank1'[_n-1]+`weight1'[_n]   in 2/l
-            sum `weight1'                                                   if `touse' == 1
+            replace 	`rank1' = `rank1'[_n-1]+ `weight1'[_n]   in 2/l
+            sum 		`weight1'                                           if `touse' == 1
             gen double `rank2' = `rank1'/`r(sum)'
             gen double `rank3' = `rank2'*`nq'                               if `touse' == 1
             gen double `rank4' = int(`rank3')
