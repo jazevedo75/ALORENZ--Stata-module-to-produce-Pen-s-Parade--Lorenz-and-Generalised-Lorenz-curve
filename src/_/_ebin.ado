@@ -1,4 +1,5 @@
-*! version 0.2          < 02july2014>         JPAzevedo
+*! version 0.2          < 02april2020>         JPAzevedo
+* fix weight
 *! version 0.1          < 24march2012>         JPAzevedo
 
 cap program drop _ebin
