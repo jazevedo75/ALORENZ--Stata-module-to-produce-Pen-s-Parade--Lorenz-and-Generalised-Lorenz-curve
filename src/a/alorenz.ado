@@ -72,7 +72,7 @@ program define alorenz   , rclass
 		}
 		else {
 			which_version groupfunction 
-			if  (`s(version)' < real(2.0)) {
+			if  (`s(version)' < 2.0) {
 				ado update groupfunction , update
 			}
 		}
