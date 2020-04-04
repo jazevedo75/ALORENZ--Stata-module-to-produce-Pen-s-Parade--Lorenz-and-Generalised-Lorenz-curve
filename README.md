@@ -24,6 +24,14 @@ Saposnik, R., 1983, "On Evaluating Income Distributions: Rank Dominance, the Sup
 
 Shorrocks A.F., 1983, "Ranking Income Distributions", Economica, 50: 3-17.
 
+
+## ADO Dependencies
+
+[Paul Corral & Minh Cong Nguyen & Joao Pedro Azevedo, 2018. "GROUPFUNCTION: Stata module to replace several basic collapse functions," Statistical Software Components S458475, Boston College Department of Economics.](https://ideas.repec.org/c/boc/bocode/s458475.html)
+
+[Daniel Klein, 2019. "WHICH_VERSION: Stata module to return location and programmer's version of ado-files," Statistical Software Components S4584706, Boston College Department of Economics, revised 11 Nov 2019.](https://ideas.repec.org/c/boc/bocode/s458706.html)
+
+
 #### Handle: RePEc:boc:bocode:s456749 
 
 #### Note: 
