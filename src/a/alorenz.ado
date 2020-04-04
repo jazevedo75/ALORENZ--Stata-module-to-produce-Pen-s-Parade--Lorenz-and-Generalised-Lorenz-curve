@@ -1,3 +1,6 @@
+*! version 3.1         < 20april2020>        JPAzevedo
+*  check for dependencies 
+*  install groupfunction on the fly (when needed)
 *! version 3.0         < 20april2020>        JPAzevedo
 *  replace collapse by groupfunction
 *   support [aw]
@@ -54,7 +57,20 @@ program define alorenz   , rclass
 					NOIsily                         ///
 					*                               ///
                 ]
+    
+  *-----------------------------------------------------------------------------
+  * Download and install required user written ado's
+  *-----------------------------------------------------------------------------
+  * Fill this list will all user-written commands this project requires
+	  local user_commands groupfunction
 
+  * Loop over all the commands to test if they are already installed, if not, then install
+	  foreach command of local user_commands {
+		cap which `command'
+		if _rc == 111 ssc install `command'
+	  }
+					
+				
     /** flow control */
 
     if (("`gom'" != "") | ("`goa'" != "")) & ("`order'" == "") {
