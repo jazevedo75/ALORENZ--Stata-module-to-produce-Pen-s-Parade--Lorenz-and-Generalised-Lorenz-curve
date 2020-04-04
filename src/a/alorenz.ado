@@ -62,7 +62,7 @@ program define alorenz   , rclass
   * Download and install required user written ado's
   *-----------------------------------------------------------------------------
   * Fill this list will all user-written commands this project requires
-	  local user_commands groupfunction
+	  local user_commands groupfunction which_version
 
   * Loop over all the commands to test if they are already installed, if not, then install
 	  foreach command of local user_commands {
@@ -71,7 +71,10 @@ program define alorenz   , rclass
 			ssc install `command'
 		}
 		else {
-			ado update `command' , update
+			which_version groupfunction 
+			if  (`s(version)' < real(2.0)) {
+				ado update groupfunction , update
+			}
 		}
 	  }
 					
