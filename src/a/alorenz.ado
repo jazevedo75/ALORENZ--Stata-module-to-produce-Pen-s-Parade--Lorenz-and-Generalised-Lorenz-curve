@@ -1,18 +1,18 @@
-*! version 2.3.2       < 02apr2020>         JPAzevedo
-*	fix _ebin weights
-* version 2.3.1       < 04feb2019>         JPAzevedo
-*	preserve return values
+*! version 3.0         < 20april2020>        JPAzevedo
+*  replace collapse by groupfunction
+*   support [aw]
+*  support return add
 * version 2.3          < 02july2014>         JPAzevedo
-* 	fix replace _pecatsal in ebin
-* version 2.2          < 28march2012>         JPAzevedo
+*	fix replace _pecatsal in ebin
+* version 2.2          < 28march2012>        JPAzevedo
 * 	test ksmirnof
-* use _ebin (equal bins)
-*  	version 2.0          < 12dec2008 >         JPAzevedo & SFranco
-*  	version 1.0          < 24jul2006 >         JPAzevedo & SFranco
+* 	use _ebin (equal bins)
+* version 2.0          < 12dec2008 >         JPAzevedo & SFranco
+* version 1.0          < 24jul2006 >         JPAzevedo & SFranco
 /*
-	gl xtitle("Proportion of `varlist'")
-	gp xtitle("Average accumulated `varlist'")
-	ge xtitle("Average accumulated `varlist'")
+gl xtitle("Proportion of `varlist'")
+gp xtitle("Average accumulated `varlist'")
+ge xtitle("Average accumulated `varlist'")
 */
 
 program define alorenz   , rclass
@@ -22,36 +22,37 @@ program define alorenz   , rclass
     syntax varlist(min=1 max=1 numeric)             ///
                 [in] [if]                           ///
                 [pweight fweight aweight]           ///
-                [, Points(real 10)                   ///
-                by(varname)                         ///
-                format(string)                      ///
-                output(string)                      ///
-                view                                ///
-                fullview                            ///
-                angle45                             ///
-                gl                                  ///
-                gp                                  ///
-                ge                                  ///
-                gom                                  ///
-                goa                                 ///
-                compare                             ///
-                base(real -99)                      ///
-                invert                              ///
-                results(string)                     ///
-                grname(string)                      ///
-                order(varname)                      ///
-                select(string)                      ///
-                mlabangle(string)                   ///
-                mlabsize(string)                    ///
-                mark(string)                        ///
-                marklabel(string)                   ///
-                markvar(varname)                    ///
-                XDECrease                           ///
-                trimif(string)                      ///
-                ksmirnov                            ///
-                exact                               ///
-                NOIsily                             ///
-                *                                   ///
+                [ , 								///
+					Points(real 10)                 ///
+					by(varname)                     ///
+					format(string)                  ///
+					output(string)                  ///
+					view                            ///
+					fullview                        ///
+					angle45                         ///
+					gl                              ///
+					gp                              ///
+					ge                              ///
+					gom                             ///
+					goa                             ///
+					compare                         ///
+					base(real -99)                  ///
+					invert                          ///
+					results(string)                 ///
+					grname(string)                  ///
+					order(varname)                  ///
+					select(string)                  ///
+					mlabangle(string)               ///
+					mlabsize(string)                ///
+					mark(string)                    ///
+					marklabel(string)               ///
+					markvar(varname)                ///
+					XDECrease                       ///
+					trimif(string)                  ///
+					ksmirnov                        ///
+					exact                           ///
+					NOIsily                         ///
+					*                               ///
                 ]
 
     /** flow control */
@@ -280,15 +281,15 @@ program define alorenz   , rclass
 				gen `rmean'=r(mean)
 			}
 
-			if ("`order'" != "") {
-				collapse (sum) `varlist' (rawsum) peso`varlist' (max) max`varlist' (mean) `rmean' `order' (max)  max`order' [`weight' `exp']  if `touse', by(`acumprop')
-			}
-			else {
-				collapse (sum) `varlist' (rawsum) peso`varlist' (max) max`varlist' (mean) `rmean'  [`weight' `exp']  if `touse', by(`acumprop')
-			}
-			*******************************************
-			* obtenendo los resultados por percentil  *
-			*******************************************
+        if ("`order'" != "") {
+            groupfunction if `touse' [`weight' `exp'] , sum(`varlist') rawsum(peso`varlist') max( max`varlist') mean( `rmean' `order') max(max`order') by(`acumprop')
+        }
+        else {
+            groupfunction if `touse' [`weight' `exp'] , sum(`varlist') rawsum(peso`varlist') max(max`varlist') mean(`rmean') by(`acumprop')
+        }
+        *******************************************
+        * obtenendo los resultados por percentil  *
+        *******************************************
 
 			tempvar totvar totpeso
 			rename `acumprop' x`varlist'`i'                                             	   /*percentil*/
