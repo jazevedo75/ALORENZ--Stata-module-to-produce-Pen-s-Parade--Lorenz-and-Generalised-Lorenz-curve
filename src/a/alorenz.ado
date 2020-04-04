@@ -1,14 +1,17 @@
-*! version 3.0         < 20april2020>        JPAzevedo
+*! version 3.1         <20200404>        JPAzevedo
+*  check for dependencies 
+*  install groupfunction on the fly (when needed)
+*! version 3.0         <20200404>        JPAzevedo
 *  replace collapse by groupfunction
 *   support [aw]
 *  support return add
-* version 2.3          < 02july2014>         JPAzevedo
+* version 2.3          <20140702>         JPAzevedo
 *	fix replace _pecatsal in ebin
-* version 2.2          < 28march2012>        JPAzevedo
+* version 2.2          <20120328>        JPAzevedo
 * 	test ksmirnof
 * 	use _ebin (equal bins)
-* version 2.0          < 12dec2008 >         JPAzevedo & SFranco
-* version 1.0          < 24jul2006 >         JPAzevedo & SFranco
+* version 2.0          <20001212>         JPAzevedo & SFranco
+* version 1.0          <20060724>         JPAzevedo & SFranco
 /*
 gl xtitle("Proportion of `varlist'")
 gp xtitle("Average accumulated `varlist'")
@@ -54,7 +57,25 @@ program define alorenz   , rclass
 					NOIsily                         ///
 					*                               ///
                 ]
+    
+  *-----------------------------------------------------------------------------
+  * Download and install required user written ado's
+  *-----------------------------------------------------------------------------
+  * Fill this list will all user-written commands this project requires
+	  local user_commands groupfunction
 
+  * Loop over all the commands to test if they are already installed, if not, then install
+	  foreach command of local user_commands {
+		cap which `command'
+		if _rc == 111 { 
+			ssc install `command'
+		}
+		else {
+			ado update `command' , update
+		}
+	  }
+					
+				
     /** flow control */
 
     if (("`gom'" != "") | ("`goa'" != "")) & ("`order'" == "") {
