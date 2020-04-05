@@ -65,7 +65,7 @@ program define alorenz   , rclass
 	  local user_commands groupfunction which_version
 
   * Loop over all the commands to test if they are already installed, if not, then install
-	  foreach command of local user_commands {
+	  qui foreach command of local user_commands {
 		cap which `command'
 		if _rc == 111 { 
 			ssc install `command'
