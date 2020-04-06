@@ -1,7 +1,10 @@
-*! version 3.1         <20200404>        JPAzevedo
+*! version 3.2         <20200405>        JPAzevedo
+*  fix parameters from which_version
+*  dependencies check runs quietly
+* version 3.1         <20200404>        JPAzevedo
 *  check for dependencies 
 *  install groupfunction on the fly (when needed)
-*! version 3.0         <20200404>        JPAzevedo
+* version 3.0         <20200404>        JPAzevedo
 *  replace collapse by groupfunction
 *   support [aw]
 *  support return add
