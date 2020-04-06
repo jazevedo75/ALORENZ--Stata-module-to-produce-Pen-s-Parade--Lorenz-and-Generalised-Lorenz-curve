@@ -1,20 +1,22 @@
-*! version 3.2         <20200405>        JPAzevedo
-*  fix parameters from which_version
-*  dependencies check runs quietly
+*! version 3.2.1       <20200406>       JPAzevedo
+*    	update _ebin to version 1.0
+* version 3.2         <20200405>        JPAzevedo
+*    	fix parameters from which_version
+*    	dependencies check runs quietly
 * version 3.1         <20200404>        JPAzevedo
-*  check for dependencies 
-*  install groupfunction on the fly (when needed)
+*    	check for dependencies 
+*    	install groupfunction on the fly (when needed)
 * version 3.0         <20200404>        JPAzevedo
-*  replace collapse by groupfunction
-*   support [aw]
-*  support return add
-* version 2.3          <20140702>         JPAzevedo
-*	fix replace _pecatsal in ebin
-* version 2.2          <20120328>        JPAzevedo
-* 	test ksmirnof
-* 	use _ebin (equal bins)
-* version 2.0          <20001212>         JPAzevedo & SFranco
-* version 1.0          <20060724>         JPAzevedo & SFranco
+*    	replace collapse by groupfunction
+*    	support [aw]
+*    	support return add
+* version 2.3          <20140702>       JPAzevedo
+*		fix replace _pecatsal in ebin
+* version 2.2          <20120328>       JPAzevedo
+* 		test ksmirnof
+* 		use _ebin (equal bins)
+* version 2.0          <20001212>       JPAzevedo & SFranco
+* version 1.0          <20060724>       JPAzevedo & SFranco
 /*
 gl xtitle("Proportion of `varlist'")
 gp xtitle("Average accumulated `varlist'")
