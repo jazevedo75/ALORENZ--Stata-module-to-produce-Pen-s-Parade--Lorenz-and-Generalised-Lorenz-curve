@@ -1,4 +1,6 @@
-*! version 3.2.1       <20200406>       JPAzevedo
+*! version 3.2.2       <20210127>       JPAzevedo
+*		adjust groupfunction version to 2.1.1
+* version 3.2.1       <20200406>       JPAzevedo
 *    	update _ebin to version 1.0
 * version 3.2         <20200405>        JPAzevedo
 *    	fix parameters from which_version
@@ -77,7 +79,11 @@ program define alorenz   , rclass
 		}
 		else {
 			which_version groupfunction 
-			if  (`s(version)' < 2.0) {
+			* remove dots
+			local sversion = real(subinstr(s(version),".","",.))
+			local l = length("`sversion'")
+			local sversion = (`sversion'/(10^(`l'-1)))
+			if  (`sversion' < 2.11) {
 				ado update groupfunction , update
 			}
 		}
