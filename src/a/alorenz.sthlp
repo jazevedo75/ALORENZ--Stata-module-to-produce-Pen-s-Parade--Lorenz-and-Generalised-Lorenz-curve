@@ -133,35 +133,29 @@ of the distribution (Atkinson, 1970).{p_end}
 
 {title:Examples}
 
-{p 8 12}{inp:. alorenz y}{p_end}
+{p 8 12}{stata "sysuse auto, clear" :. sysuse auto, clear}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight]}{p_end}
+{p 8 12}{stata "alorenz price" :. alorenz price}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(10)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight]" :. alorenz price [pw=weight]}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(10) format(%12.0f) view}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10)" :. alorenz price [pw=weight], points(10)}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(10) output(tab) fullview}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) view}" :. alorenz price [pw=weight], points(10) format(%12.0f) view}}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(10) format(%12.0f) fullview output(tab)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) output(tab) fullview}" :. alorenz price [pw=weight], points(10) output(tab) fullview}}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) view gl}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}" :. alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) view gl ge}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(100) view gl" :. alorenz price [pw=weight], points(100) view gl}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) view gl ge gp}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(100) view gl ge gp" :. alorenz price [pw=weight], points(100) view gl ge gp}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab)" :. alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab)}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab) by(pais)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) by(foreign)" :. alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) by(foreign)}{p_end}
 
-{p 8 12}{inp:. alorenz y [pw=weight], points(10) compare base(1)}{p_end}
-
-{p 8 12}{inp:. alorenz y [pw=weight], points(10) compare base(4)}{p_end}
-
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) gp select(country == India | country == Brazil | country == Peru | country == Mexico)}{p_end}
-
-{p 8 12}{inp:. alorenz y [pw=weight], points(100) gp order(x) select(country == India | country == Brazil | country == Peru | country == Mexico)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10)" :. alorenz price [pw=weight], points(10)}{p_end}
 
 {title:References}
 
