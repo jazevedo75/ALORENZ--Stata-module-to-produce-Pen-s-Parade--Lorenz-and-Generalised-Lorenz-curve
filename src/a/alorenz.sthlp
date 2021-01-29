@@ -141,11 +141,11 @@ of the distribution (Atkinson, 1970).{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(10) view" :. alorenz price [pw=weight], points(10) view}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) view}" :. alorenz price [pw=weight], points(10) format(%12.0f) view}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) view" :. alorenz price [pw=weight], points(10) format(%12.0f) view}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) output(tab) fullview}" :. alorenz price [pw=weight], points(10) output(tab) fullview}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) output(tab) fullview" :. alorenz price [pw=weight], points(10) output(tab) fullview}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}" :. alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)" :. alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(100) view gl" :. alorenz price [pw=weight], points(100) view gl}{p_end}
 
