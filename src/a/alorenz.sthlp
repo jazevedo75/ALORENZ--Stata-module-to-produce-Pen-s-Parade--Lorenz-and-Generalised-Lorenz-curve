@@ -155,7 +155,6 @@ of the distribution (Atkinson, 1970).{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(20) view gl ge gp angle45 format(%12.0f) by(foreign)" :. alorenz price [pw=weight], points(20) view gl ge gp angle45 format(%12.0f) by(foreign)}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10)" :. alorenz price [pw=weight], points(10)}{p_end}
 
 {title:References}
 
