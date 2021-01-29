@@ -135,17 +135,17 @@ of the distribution (Atkinson, 1970).{p_end}
 
 {p 8 12}{stata "sysuse auto, clear" :. sysuse auto, clear}{p_end}
 
-{p 8 12}{stata "alorenz price" :. alorenz price}{p_end}
+{p 8 12}{stata "alorenz price, view" :. alorenz price, view}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight]" :. alorenz price [pw=weight]}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], fullview" :. alorenz price [pw=weight], fullview}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10)" :. alorenz price [pw=weight], points(10)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) view" :. alorenz price [pw=weight], points(10) view}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) view}" :. alorenz price [pw=weight], points(10) format(%12.0f) view}}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) view}" :. alorenz price [pw=weight], points(10) format(%12.0f) view}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) output(tab) fullview}" :. alorenz price [pw=weight], points(10) output(tab) fullview}}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) output(tab) fullview}" :. alorenz price [pw=weight], points(10) output(tab) fullview}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}" :. alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}" :. alorenz price [pw=weight], points(10) format(%12.0f) fullview output(tab)}{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(100) view gl" :. alorenz price [pw=weight], points(100) view gl}{p_end}
 
@@ -153,7 +153,7 @@ of the distribution (Atkinson, 1970).{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab)" :. alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) output(tab)}{p_end}
 
-{p 8 12}{stata "alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) by(foreign)" :. alorenz price [pw=weight], points(100) view gl ge gp angle45 format(%12.0f) by(foreign)}{p_end}
+{p 8 12}{stata "alorenz price [pw=weight], points(20) view gl ge gp angle45 format(%12.0f) by(foreign)" :. alorenz price [pw=weight], points(20) view gl ge gp angle45 format(%12.0f) by(foreign)}{p_end}
 
 {p 8 12}{stata "alorenz price [pw=weight], points(10)" :. alorenz price [pw=weight], points(10)}{p_end}
 
